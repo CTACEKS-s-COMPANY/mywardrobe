@@ -1,4 +1,4 @@
-package ru.alexsas.mywardrobe.fragments;
+package ru.alexsas.mywardrobe.fragments.auth;
 
 import static android.content.ContentValues.TAG;
 
@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import ru.alexsas.mywardrobe.databinding.FragmentRegisterBinding;
-import ru.alexsas.mywardrobe.fragments.Login.LoginFragment;
+import ru.alexsas.mywardrobe.fragments.auth.Login.LoginFragment;
 import ru.alexsas.mywardrobe.NavigationHost;
 import ru.alexsas.mywardrobe.R;
 

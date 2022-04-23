@@ -5,13 +5,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ProgressBar;
 
-import ru.alexsas.mywardrobe.databinding.ActivityMainBinding;
-import ru.alexsas.mywardrobe.fragments.Login.LoginViewModel;
+import ru.alexsas.mywardrobe.fragments.auth.Login.LoginViewModel;
 import ru.alexsas.mywardrobe.fragments.MainFragment;
-import ru.alexsas.mywardrobe.fragments.RegisterFragment;
+import ru.alexsas.mywardrobe.fragments.auth.RegisterFragment;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationHost {

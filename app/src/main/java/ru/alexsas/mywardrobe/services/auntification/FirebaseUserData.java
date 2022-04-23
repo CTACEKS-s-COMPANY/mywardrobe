@@ -1,4 +1,4 @@
-package ru.alexsas.mywardrobe.services;
+package ru.alexsas.mywardrobe.services.auntification;
 
 import androidx.lifecycle.LiveData;
 

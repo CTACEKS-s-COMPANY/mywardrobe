@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "123850857919-sjsuksajdkoq9g4ocofhqm4rd25kpb7b.apps.googleusercontent.com",
+          "client_id": "123850857919-fg1didlrigbnd28f08aqo36ntsgcrsmb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "ru.alexsas.mywardrobe",
-            "certificate_hash": "aaa475aebff32ca4fecf4873d2d24d3a67aaefc0"
+            "certificate_hash": "26694bf8ff4950f717cfc91ef4d78fd895face45"
           }
         },
         {

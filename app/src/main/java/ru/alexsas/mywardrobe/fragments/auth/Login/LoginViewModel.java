@@ -1,11 +1,11 @@
-package ru.alexsas.mywardrobe.fragments.Login;
+package ru.alexsas.mywardrobe.fragments.auth.Login;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
 import com.google.firebase.auth.FirebaseUser;
-import ru.alexsas.mywardrobe.services.FirebaseUserData;
+import ru.alexsas.mywardrobe.services.auntification.FirebaseUserData;
 
 
 

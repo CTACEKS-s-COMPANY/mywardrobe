@@ -1,4 +1,4 @@
-package ru.alexsas.mywardrobe.fragments.Login;
+package ru.alexsas.mywardrobe.fragments.auth.Login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,7 +29,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 import ru.alexsas.mywardrobe.databinding.FragmentLoginBinding;
-import ru.alexsas.mywardrobe.fragments.RegisterFragment;
+import ru.alexsas.mywardrobe.fragments.auth.ForgotPasswordFragment;
+import ru.alexsas.mywardrobe.fragments.auth.RegisterFragment;
 import ru.alexsas.mywardrobe.NavigationHost;
 import ru.alexsas.mywardrobe.R;
 
@@ -57,7 +58,7 @@ public class LoginFragment extends Fragment {
 
         //Buttons
 
-        mBinding.nextButton.setOnClickListener(new View.OnClickListener() {
+        mBinding.logInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String email = mBinding.emailEditText.getText().toString();
@@ -88,6 +89,13 @@ public class LoginFragment extends Fragment {
                     mBinding.passwordTextInput.setError(null);
                 }
                 return false;
+            }
+        });
+
+        mBinding.tvForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((NavigationHost) getActivity()).navigateTo(new ForgotPasswordFragment(), false);
             }
         });
 
