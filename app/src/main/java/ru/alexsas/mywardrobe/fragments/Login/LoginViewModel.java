@@ -1,4 +1,4 @@
-package ru.alexsas.mywardrobe.Fragments.Login;
+package ru.alexsas.mywardrobe.fragments.Login;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
@@ -15,6 +15,7 @@ final class LoginViewModel2$$special$$inlined$map$1 implements Function {
         return user != null ? LoginViewModel.AuthenticationState.AUTHENTICATED : LoginViewModel.AuthenticationState.UNAUTHENTICATED;
     }
 }
+
 
 public class LoginViewModel extends ViewModel {
     public enum AuthenticationState {

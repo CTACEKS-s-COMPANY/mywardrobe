@@ -3,11 +3,10 @@
     <!-- Base application theme. -->
     <style name="Main.Theme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#CA1C1C</item>
+        <item name="colorPrimary">#E88282</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">#D5294B</item>
-<!--        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>-->
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="colorAccent">#B36877</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 

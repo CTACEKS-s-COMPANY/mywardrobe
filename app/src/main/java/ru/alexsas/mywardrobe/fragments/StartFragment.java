@@ -1,4 +1,4 @@
-package ru.alexsas.mywardrobe.Fragments;
+package ru.alexsas.mywardrobe.fragments;
 
 import android.os.Bundle;
 

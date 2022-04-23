@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 
-import ru.alexsas.mywardrobe.Fragments.Login.LoginFragment;
-import ru.alexsas.mywardrobe.Fragments.Login.LoginViewModel;
-import ru.alexsas.mywardrobe.Fragments.MainFragment;
-import ru.alexsas.mywardrobe.Fragments.RegisterFragment;
+import ru.alexsas.mywardrobe.databinding.ActivityMainBinding;
+import ru.alexsas.mywardrobe.fragments.Login.LoginViewModel;
+import ru.alexsas.mywardrobe.fragments.MainFragment;
+import ru.alexsas.mywardrobe.fragments.RegisterFragment;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationHost {
@@ -21,30 +23,22 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         viewModel.authenticationState.observe(this,
-                authenticationState ->{
-                    if(authenticationState == LoginViewModel.AuthenticationState.AUTHENTICATED) {
+                authenticationState -> {
+                    if (authenticationState == LoginViewModel.AuthenticationState.AUTHENTICATED) {
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .add(R.id.container, new MainFragment())
                                 .commit();
-                    }else{
+                    } else {
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .add(R.id.container, new RegisterFragment())
                                 .commit();
                     }
                 });
-
-
-//        if (savedInstanceState == null) {
-//            getSupportFragmentManager()
-//                    .beginTransaction()
-//                    .add(R.id.container, new RegisterFragment())
-//                    .commit();
-//        }
     }
-
 
 
     @Override

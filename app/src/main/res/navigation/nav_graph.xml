@@ -8,14 +8,14 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="ru.alexsas.mywardrobe.Fragments.Login.LoginFragment"
+        android:name="ru.alexsas.mywardrobe.fragments.Login.LoginFragment"
         android:label="Авторизация"
         tools:layout="@layout/fragment_login"/>
 
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="ru.alexsas.mywardrobe.Fragments.RegisterFragment"
+        android:name="ru.alexsas.mywardrobe.fragments.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action

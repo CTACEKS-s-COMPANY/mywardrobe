@@ -1,4 +1,4 @@
-package ru.alexsas.mywardrobe.Fragments;
+package ru.alexsas.mywardrobe.fragments;
 
 import android.os.Bundle;
 
@@ -12,9 +12,6 @@ import android.view.ViewGroup;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-import ru.alexsas.mywardrobe.Fragments.Login.LoginViewModel;
-import ru.alexsas.mywardrobe.R;
-import ru.alexsas.mywardrobe.databinding.FragmentLoginBinding;
 import ru.alexsas.mywardrobe.databinding.FragmentMainBinding;
 
 
