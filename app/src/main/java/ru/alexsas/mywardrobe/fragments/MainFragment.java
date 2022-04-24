@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 
 import ru.alexsas.mywardrobe.databinding.FragmentMainBinding;
@@ -18,7 +19,6 @@ import ru.alexsas.mywardrobe.databinding.FragmentMainBinding;
 
 public class MainFragment extends Fragment {
 
-    FirebaseAuth mAuth;
     FragmentMainBinding mBinding;
 
 
@@ -26,7 +26,6 @@ public class MainFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
 
 
     @Override
@@ -40,14 +39,14 @@ public class MainFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         mBinding.signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAuth.signOut();
+                AuthUI.getInstance().signOut(getContext());
             }
         });
 
-        mAuth = FirebaseAuth.getInstance();
     }
 
 }

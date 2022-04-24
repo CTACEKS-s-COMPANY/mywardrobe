@@ -9,6 +9,8 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
 
+import java.util.Objects;
+
 import ru.alexsas.mywardrobe.fragments.auth.Login.LoginFragment;
 import ru.alexsas.mywardrobe.fragments.auth.Login.LoginViewModel;
 import ru.alexsas.mywardrobe.fragments.MainFragment;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.nav_host_fragment);
-        navcontroller = navHostFragment.getNavController();
+        navcontroller = Objects.requireNonNull(navHostFragment).getNavController();
 
         viewModel.authenticationState.observe(this,
                 authenticationState -> {
