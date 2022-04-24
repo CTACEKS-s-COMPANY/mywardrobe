@@ -29,5 +29,6 @@
     <string name="i_have_account">I have account</string>
     <string name="button_sign_out">Sign out</string>
     <string name="tv_forgot_password">Forgot Password?</string>
+    <string name="click_to_register">Dont have account? Click to register!</string>
 
 </resources>

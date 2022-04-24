@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.text.TextUtils;
 import android.util.Log;
@@ -15,19 +16,10 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-import java.util.Objects;
-
-import ru.alexsas.mywardrobe.NavigationHost;
 import ru.alexsas.mywardrobe.R;
 import ru.alexsas.mywardrobe.databinding.FragmentForgotPasswordBinding;
-import ru.alexsas.mywardrobe.databinding.FragmentLoginBinding;
-import ru.alexsas.mywardrobe.databinding.FragmentMainBinding;
-import ru.alexsas.mywardrobe.fragments.auth.Login.LoginFragment;
 
 
 public class ForgotPasswordFragment extends Fragment {
@@ -52,6 +44,13 @@ public class ForgotPasswordFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        mBinding.cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).popBackStack();
+            }
+        });
+
         mBinding.submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,7 +64,7 @@ public class ForgotPasswordFragment extends Fragment {
                                         Log.d("RRR", "Email sent.");
                                         Toast.makeText(getContext(), "Email send. Check your mail",
                                                 Toast.LENGTH_SHORT).show();
-                                        ((NavigationHost) getActivity()).navigateTo(new LoginFragment(), false);
+                                        Navigation.findNavController(view).navigate(R.id.action_forgotPasswordFragment_to_loginFragment);
                                     } else {
                                         Log.d("RRR", "Email don't send");
                                         Toast.makeText(getContext(), "Error with your email. Check on correct",

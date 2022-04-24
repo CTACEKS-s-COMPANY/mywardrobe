@@ -67,10 +67,10 @@
             android:id="@+id/tv_forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
             android:layout_marginEnd="16dp"
             android:padding="5dp"
-            android:layout_gravity="right"
-            android:text="@string/tv_forgot_password"/>
+            android:text="@string/tv_forgot_password" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintlayout"
@@ -88,31 +88,27 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/cancel_button"
-                style="@style/Widget.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:text="@string/button_cancel"
-                app:layout_constraintEnd_toStartOf="@id/log_in_button"
-                app:layout_constraintRight_toLeftOf="@id/log_in_button"
-                app:layout_constraintTop_toTopOf="parent" />
-
 
             <com.google.android.gms.common.SignInButton
                 android:id="@+id/signInButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="127dp"
+                android:layout_height="48dp"
                 android:layout_centerInParent="true"
-                android:layout_gravity="center"
-                android:layout_marginEnd="50dp"
+                android:layout_gravity="left"
                 android:visibility="visible"
-                app:layout_constraintEnd_toStartOf="@id/cancel_button"
-                app:layout_constraintRight_toLeftOf="@id/cancel_button"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_to_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:text="@string/click_to_register" />
 
 
     </LinearLayout>

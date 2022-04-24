@@ -7,6 +7,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.text.TextUtils;
 import android.util.Log;
@@ -22,8 +24,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import ru.alexsas.mywardrobe.databinding.FragmentRegisterBinding;
-import ru.alexsas.mywardrobe.fragments.auth.Login.LoginFragment;
-import ru.alexsas.mywardrobe.NavigationHost;
 import ru.alexsas.mywardrobe.R;
 
 
@@ -56,10 +56,10 @@ public class RegisterFragment extends Fragment {
             }
         });
 
-        mBinding.iHaveAccountButton.setOnClickListener(new View.OnClickListener() {
+        mBinding.cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NavigationHost) getActivity()).navigateTo(new LoginFragment(), false);
+                Navigation.findNavController(view).popBackStack();
             }
         });
 
@@ -68,9 +68,6 @@ public class RegisterFragment extends Fragment {
 
     }
 
-//    private boolean isPasswordValid(@Nullable Editable text) {
-//        return text != null && text.length() >= 8;
-//    }
 
 //    @Override
 //    public void onStart() {
@@ -82,33 +79,8 @@ public class RegisterFragment extends Fragment {
 //        }
 //    }
 
-//    private void reload() {
-//        mAuth.getCurrentUser().reload().addOnCompleteListener(new OnCompleteListener<Void>() {
-//            @Override
-//            public void onComplete(@NonNull Task<Void> task) {
-//                if (task.isSuccessful()) {
-//                    Toast.makeText(getContext(),
-//                            "Reload successful!",
-//                            Toast.LENGTH_SHORT).show();
-//                } else {
-//                    Log.e(TAG, "reload", task.getException());
-//                    Toast.makeText(getContext(),
-//                            "Failed to reload user.",
-//                            Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-//    }
 
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-//        if(currentUser != null){
-//            reload();
-//        }
-//    }
 
     private boolean validateForm() {
         boolean valid = true;
@@ -158,6 +130,7 @@ public class RegisterFragment extends Fragment {
                             FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(getContext(), "Account created!",
                                     Toast.LENGTH_SHORT).show();
+//                            Navigation.findNavController(getView()).navigate(R.id.action_registerFragment_to_mainFragment);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());

@@ -13,6 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavOptions;
+import androidx.navigation.Navigation;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -28,11 +30,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-import ru.alexsas.mywardrobe.databinding.FragmentLoginBinding;
-import ru.alexsas.mywardrobe.fragments.auth.ForgotPasswordFragment;
-import ru.alexsas.mywardrobe.fragments.auth.RegisterFragment;
-import ru.alexsas.mywardrobe.NavigationHost;
 import ru.alexsas.mywardrobe.R;
+import ru.alexsas.mywardrobe.databinding.FragmentLoginBinding;
 
 
 public class LoginFragment extends Fragment {
@@ -67,12 +66,6 @@ public class LoginFragment extends Fragment {
             }
         });
 
-        mBinding.cancelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ((NavigationHost) getActivity()).navigateTo(new RegisterFragment(), false);
-            }
-        });
 
         mBinding.signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +88,14 @@ public class LoginFragment extends Fragment {
         mBinding.tvForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((NavigationHost) getActivity()).navigateTo(new ForgotPasswordFragment(), false);
+                Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_forgotPasswordFragment);
+            }
+        });
+
+        mBinding.tvToRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_registerFragment);
             }
         });
 
@@ -128,7 +128,7 @@ public class LoginFragment extends Fragment {
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId());
                 firebaseAuthWithGoogle(account.getIdToken());
-                Toast.makeText(getContext(), "Authentication good",
+                Toast.makeText(getContext(), "Google sign in good",
                         Toast.LENGTH_SHORT).show();
             } catch (ApiException e) {
                 // Google Sign In failed
@@ -147,7 +147,6 @@ public class LoginFragment extends Fragment {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
