@@ -21,6 +21,7 @@ public class MainFragment extends Fragment {
     FirebaseAuth mAuth;
     FragmentMainBinding mBinding;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
