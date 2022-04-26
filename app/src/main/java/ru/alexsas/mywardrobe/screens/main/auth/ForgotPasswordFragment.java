@@ -1,4 +1,4 @@
-package ru.alexsas.mywardrobe.fragments.auth;
+package ru.alexsas.mywardrobe.screens.main.auth;
 
 import android.os.Bundle;
 
@@ -64,7 +64,7 @@ public class ForgotPasswordFragment extends Fragment {
                                         Log.d("RRR", "Email sent.");
                                         Toast.makeText(getContext(), "Email send. Check your mail",
                                                 Toast.LENGTH_SHORT).show();
-                                        Navigation.findNavController(view).navigate(R.id.action_forgotPasswordFragment_to_loginFragment);
+                                        Navigation.findNavController(view).popBackStack();
                                     } else {
                                         Log.d("RRR", "Email don't send");
                                         Toast.makeText(getContext(), "Error with your email. Check on correct",

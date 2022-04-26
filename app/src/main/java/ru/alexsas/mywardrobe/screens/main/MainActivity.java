@@ -1,20 +1,15 @@
-package ru.alexsas.mywardrobe;
+package ru.alexsas.mywardrobe.screens.main;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
 
 import java.util.Objects;
 
-import ru.alexsas.mywardrobe.fragments.auth.Login.LoginFragment;
-import ru.alexsas.mywardrobe.fragments.auth.Login.LoginViewModel;
-import ru.alexsas.mywardrobe.fragments.MainFragment;
-import ru.alexsas.mywardrobe.fragments.auth.RegisterFragment;
+import ru.alexsas.mywardrobe.R;
+import ru.alexsas.mywardrobe.screens.main.auth.Login.LoginViewModel;
 
 
 public class MainActivity extends AppCompatActivity {

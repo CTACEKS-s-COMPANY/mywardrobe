@@ -1,4 +1,4 @@
-package ru.alexsas.mywardrobe.fragments.auth;
+package ru.alexsas.mywardrobe.screens.main.auth;
 
 import static android.content.ContentValues.TAG;
 
@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 
 import android.text.TextUtils;
 import android.util.Log;

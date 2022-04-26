@@ -1,4 +1,4 @@
-package ru.alexsas.mywardrobe.fragments.auth.Login;
+package ru.alexsas.mywardrobe.screens.main.auth.Login;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;

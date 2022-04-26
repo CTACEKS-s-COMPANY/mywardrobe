@@ -1,4 +1,4 @@
-package ru.alexsas.mywardrobe.fragments;
+package ru.alexsas.mywardrobe.screens.main.tabs;
 
 import android.os.Bundle;
 

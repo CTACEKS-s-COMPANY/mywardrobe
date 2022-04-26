@@ -10,6 +10,7 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
+
     <style name="Theme.Autumn" parent="Main.Theme">
         <item name="colorPrimary">#FFCF44</item>
         <item name="colorPrimaryDark">#FD9725</item>
@@ -17,6 +18,13 @@
         <item name="colorOnPrimary">#FFFFFF</item>
         <item name="colorError">#FD9725</item>
     </style>
+
+    <style name="SplashActivity" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
 
     <style name="Widget.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="hintTextAppearance">

@@ -3,20 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/startFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="ru.alexsas.mywardrobe.fragments.auth.ForgotPasswordFragment"
+        android:name="ru.alexsas.mywardrobe.screens.main.auth.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
-        tools:layout="@layout/fragment_forgot_password" >
-        <action
-            android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
-            app:destination="@id/loginFragment"/>
-    </fragment>
+        tools:layout="@layout/fragment_forgot_password" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="ru.alexsas.mywardrobe.fragments.auth.Login.LoginFragment"
+        android:name="ru.alexsas.mywardrobe.screens.main.auth.Login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -31,31 +27,16 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="ru.alexsas.mywardrobe.fragments.MainFragment"
+        android:name="ru.alexsas.mywardrobe.screens.main.tabs.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
     <fragment
         android:id="@+id/registerFragment"
-        android:name="ru.alexsas.mywardrobe.fragments.auth.RegisterFragment"
+        android:name="ru.alexsas.mywardrobe.screens.main.auth.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
-            android:id="@+id/action_registerFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-        <action
             android:id="@+id/action_registerFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/startFragment"
-        android:name="ru.alexsas.mywardrobe.fragments.StartFragment"
-        android:label="fragment_start"
-        tools:layout="@layout/fragment_start" >
-        <action
-            android:id="@+id/action_startFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_startFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
 </navigation>

@@ -16,15 +16,24 @@
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/drawable/main_icon.xml" value="0.2245" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/drawable/main_icon_144.xml" value="0.209" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/drawable/menu.xml" value="0.2565" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/drawable/splash.xml" value="0.285" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/activity_main.xml" value="0.2015625" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/activity_splash.xml" value="0.184375" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/custom_toast.xml" value="0.2015625" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/fragment_edit_profile.xml" value="0.1" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/fragment_forgot_password.xml" value="0.33" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/fragment_google.xml" value="0.2015625" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/fragment_login.xml" value="0.3489630297565374" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/fragment_main.xml" value="0.2015625" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/fragment_register.xml" value="0.22" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/fragment_settings.xml" value="0.22" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/fragment_splash.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/fragment_start.xml" value="0.33645833333333336" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/fragment_tabs.xml" value="0.1" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/google_sign_in.xml" value="0.2609375" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe/app/src/main/res/layout/settings_activity.xml" value="0.234375" />
       </map>
     </option>
   </component>
