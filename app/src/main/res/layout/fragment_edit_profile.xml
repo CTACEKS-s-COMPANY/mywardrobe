@@ -14,20 +14,18 @@
 
         <TextView
             android:id="@+id/screenTitleTextView"
-            style="@style/TitleTextView"
+            style="@style/TextAppearance.Title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/usernameTextInput"
-            app:layout_constraintVertical_chainStyle="packed"
-            android:text="@string/edit_profile_description"/>
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/usernameTextInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/field_username"
-            android:layout_marginTop="@dimen/large_space"
+            android:hint="@string/account_label"
             app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,11 +44,10 @@
 
         <Button
             android:id="@+id/saveButton"
-            style="@style/GlobalTextInputStyle.Big"
+            style="@style/Widget.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/action_save"
-            android:layout_marginTop="@dimen/large_space"
+            android:text="@string/save_settings"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/usernameTextInput"
@@ -58,10 +55,10 @@
 
         <Button
             android:id="@+id/cancelButton"
-            style="@style/GlobalTextInputStyle.Secondary.Big"
+            style="@style/Widget.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/action_cancel"
+            android:text="@string/button_cancel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/saveButton"
@@ -71,7 +68,6 @@
             android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medium_space"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cancelButton"/>

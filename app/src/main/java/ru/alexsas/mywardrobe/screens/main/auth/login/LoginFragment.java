@@ -1,9 +1,10 @@
-package ru.alexsas.mywardrobe.screens.main.auth.Login;
+package ru.alexsas.mywardrobe.screens.main.auth.login;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +42,8 @@ public class LoginFragment extends Fragment {
 
     private static final int RC_SIGN_IN = 9001;
     private static final String TAG = "RRR";
+
+
 
 
     @Override
@@ -129,9 +132,11 @@ public class LoginFragment extends Fragment {
                 firebaseAuthWithGoogle(account.getIdToken());
                 Toast.makeText(getContext(), "Google sign in good",
                         Toast.LENGTH_SHORT).show();
+                Navigation.findNavController(getView()).navigate(R.id.action_loginFragment_to_tabsFragment);
             } catch (ApiException e) {
                 // Google Sign In failed
-                Log.w(TAG, "Google sign in failed", e);
+                Log.w(TAG, "There is no such account, please check\n" +
+                        "your details", e);
             }
         }
     }
@@ -156,18 +161,17 @@ public class LoginFragment extends Fragment {
     }
 
 
-
-
     private boolean validateForm() {
         boolean valid = true;
 
         String email = mBinding.emailEditText.getText().toString();
-        if (TextUtils.isEmpty(email)) {
+        if (TextUtils.isEmpty(email) && !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             mBinding.emailTextInput.setError(getString(R.string.email_error_msg));
             valid = false;
         } else {
             mBinding.emailTextInput.setError(null);
         }
+
 
         String password = mBinding.passwordEditText.getText().toString();
         if (TextUtils.isEmpty(password) || password.length() <= 8) {
@@ -197,13 +201,14 @@ public class LoginFragment extends Fragment {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(getContext(), "Authentication Successful",
                                     Toast.LENGTH_SHORT).show();
+                            Navigation.findNavController(getView()).navigate(R.id.action_loginFragment_to_tabsFragment);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(getContext(), "Authentication failed.",
+                            Toast.makeText(getContext(), "There is no such account, please check\n" +
+                                            "your details",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }

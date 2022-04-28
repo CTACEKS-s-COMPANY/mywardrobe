@@ -8,9 +8,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,24 +70,11 @@ public class RegisterFragment extends Fragment {
     }
 
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-//        if (currentUser != null) {
-//            reload();
-//        }
-//    }
-
-
-
-
     private boolean validateForm() {
         boolean valid = true;
 
         String email = mBinding.emailEditText.getText().toString();
-        if (TextUtils.isEmpty(email)) {
+        if (TextUtils.isEmpty(email) && !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             mBinding.emailTextInput.setError(getString(R.string.email_error_msg));
             valid = false;
         } else {
@@ -127,13 +116,12 @@ public class RegisterFragment extends Fragment {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(getContext(), "Account created!",
+                            Toast.makeText(getContext(), "Account successfully created!",
                                     Toast.LENGTH_SHORT).show();
-//                            Navigation.findNavController(getView()).navigate(R.id.action_registerFragment_to_mainFragment);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(getContext(), "Authentication failed.",
+                            Toast.makeText(getContext(), "Account creation failed",
                                     Toast.LENGTH_SHORT).show();
                         }
 

@@ -13,11 +13,6 @@ import ru.alexsas.mywardrobe.R;
 
 public class TabsFragment extends Fragment {
 
-
-
-
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

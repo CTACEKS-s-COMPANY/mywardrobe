@@ -4,8 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".screens.main.tabs.dashboard.DashboardFragment">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/boxesContainer"
@@ -21,10 +20,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:flow_wrapMode="chain"
-            app:flow_horizontalStyle="packed"
-            app:flow_horizontalGap="@dimen/medium_space"
-            app:flow_verticalGap="@dimen/medium_space"
-            app:constraint_referenced_ids="greenBox,yellowBox"/>
+            app:flow_horizontalStyle="packed" />
 
         <!-- This is an example, real items are derived from the model: -->
 
@@ -39,7 +35,6 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textSize="16sp"
-        android:text="@string/no_boxes"
         android:visibility="gone"/>
 
 </FrameLayout>

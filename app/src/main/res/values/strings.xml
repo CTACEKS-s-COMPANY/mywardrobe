@@ -25,7 +25,7 @@
     <string name="account_label">My Account</string>
     <string name="password_error_msg">Password must contain at least 8 characters.</string>
     <string name="retry_password_error_msg">Passwords don\'t match!</string>
-    <string name="email_error_msg">Error with your email</string>
+    <string name="email_error_msg">Incorrect email</string>
     <string name="i_have_account">I have account</string>
     <string name="button_sign_out">Sign out</string>
     <string name="tv_forgot_password">Forgot Password?</string>
@@ -46,5 +46,9 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="save_settings">Save</string>
+    <string name="profile">Profile</string>
+    <string name="items">Items</string>
+    <string name="outfit">Outfit</string>
 
 </resources>

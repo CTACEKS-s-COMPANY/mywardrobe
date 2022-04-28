@@ -9,6 +9,7 @@ import androidx.navigation.Navigation;
 
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,7 +84,7 @@ public class ForgotPasswordFragment extends Fragment {
         boolean valid = true;
 
         String email = mBinding.emailEditText.getText().toString();
-        if (TextUtils.isEmpty(email)) {
+        if (TextUtils.isEmpty(email) && !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             mBinding.emailTextInput.setError(getString(R.string.email_error_msg));
             valid = false;
         } else {
